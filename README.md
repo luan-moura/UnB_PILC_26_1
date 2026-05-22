@@ -4,6 +4,8 @@
 
  Uma atividade de computação desplugada com uso de cartas para introduzir conceitos de bancos de dados relacionais por meio da biodiversidade dos biomas brasileiros. 
 
+ ![Banner EcoDex](img/banner.jpg)
+
 ### Disciplinas e conteúdos relacionados 
 
 * **Biologia:** cadeias e teias alimentares, hábitos alimentares, e interações entre seres vivos e fatores abióticos; conservação de espécies e impactos das atividades antrópicas na perda de habitats; adaptações morfológicas e fisiológicas da flora e da fauna aos diferentes ecossistemas.
