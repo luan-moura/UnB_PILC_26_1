@@ -53,71 +53,7 @@ O professor precisará de:
 
 ## EcoDex
 
-### Passo 1: O Caos Construtivo (Rodada 1)
-O professor entrega o baralho completo embaralhado para cada equipe. Sem dar explicações prévias sobre bancos de dados, o professor lança os desafios da **Rodada 1** um por um. 
-* *Exemplo de Comando:* "Separem todas as cartas de animais que sejam Carnívoros. Valendo!"
-* Os alunos precisarão vasculhar o baralho inteiro para achar as cartas. O tempo de resposta será alto e a mesa ficará desorganizada.
 
-### Passo 2: A Parada Pedagógica (A Ponte com a TI)
-Terminada a primeira rodada, o professor interrompe o jogo e abre um debate no quadro, correlacionando o comportamento físico dos alunos com a arquitetura de um computador:
-* **As Cores das Cartas = Tabelas:** Explicar que separar por cores agiliza a busca porque cria entidades distintas.
-* **Os Critérios das Perguntas = Sintaxe SQL:** Mostrar que quando o professor diz *"Plantas do tipo Cacto OU Animais da classe Ave"*, a mente deles executa um filtro `WHERE tipo = 'Cacto' OR classe = 'Ave'`.
-* **Técnicas de Otimização:** O professor incentiva os alunos a criarem maneiras de organizar as cartas na mesa para bater os tempos de busca do relógio (Simulando uma **Indexação de Banco de Dados**).
-
-### Passo 3: O Jogo como um Sistema Otimizado (Rodada 2)
-O professor aplica a **Rodada 2**, que possui perguntas mais complexas e profundas. Agora, os alunos jogam de forma consciente: deixam as cartas separadas por pilhas e utilizam varreduras de texto por "Chaves Comuns" (como o estado/UF) para cruzar dados. Eles não jogam mais por instinto, jogam agindo como o próprio motor de um banco de dados relacional.
-
----
-
-## Roteiro de Desafios (Queries da Natureza)
-
-### Rodada 1:
-1.  **Filtro Simples (Tabela Fauna):** "Separem todas as cartas de animais que sejam Carnívoros. Valendo!"
-2.  **Filtro Simples (Tabela Flora):** "Separem todas as cartas de Plantas cujo uso principal seja Ornamental. Valendo!"
-3.  **Filtro Simples (Tabela Lugares):** "Separem todos os Lugares que possuem foco no turismo de Aventura. Valendo!"
-4.  **Filtro Simples com Atributo de Risco:** "Encontrem e separem todos os Animais que estão com o nível de ameaça classificado como Vulnerável. Valendo!"
-5.  **Uso do Operador Lógico OR:** "Quero que vocês separem duas coisas ao mesmo tempo: todas as Plantas do tipo Cacto OU todos os Animais da classe Ave. Valendo!"
-6.  **Filtro Global Dinâmico por Parâmetro:** "Separem todas as Plantas, todos os Animais E todos os Lugares que tenham ligação direta com o estado que vocês moram. Valendo!"
-7.  **Operador de Exclusão (AND NOT):** "Encontrem todos os Animais que tenham a palavra Seguro no nível de ameaça, mas que NÃO estejam no ‘RS’ na sua localização. Valendo!"
-8.  **Filtro Composto (AND):** "Separem todas as Plantas usadas para fins Medicinais e que sejam do tipo Árvore. Valendo!"
-9.  **Introdução ao GROUP BY e COUNT:** "Descubram qual é o Tipo de Turismo que aparece mais vezes no baralho azul. Separem todas as cartas que pertencem a esse tipo campeão. Valendo!"
-10. **Filtro Numérico por Valor:** "Quais Biomas brasileiros possuem uma Área Territorial maior do que 1 milhão de km²? Valendo!"
-11. **Função de Agregação Avançada:** "Quantos hábitos alimentares existem e quantos animais possuem esses mesmos hábitos alimentares? Valendo!"
-12. **O Primeiro INNER JOIN Humano:** "Achem a carta do lugar Jalapão. Descubram sua UF. Agora, separem todas as Plantas e Animais que ocorrem nessa UF, mas atenção: só valem as cartas que forem consideradas Seguras ou de uso Alimentício. Valendo!"
-
-### Rodada 2:
-*(A ser aplicada após a explicação do professor, exigindo técnicas explícitas de indexação e consultas estruturadas)*
-
-13. **Uso de Índice de Atributo:** "Aplicando o índice vermelho: separem todos os Animais que possuem o hábito alimentar Onívoro. Valendo!"
-14. **Uso de Conectivos Complexos:** "Quero que vocês usem a lógica do `OU`: separem todas as cartas que sejam Biomas com clima Tropical `OU` que sejam Plantas que preferem o clima Subtropical. Valendo!"
-15. **Agrupamento Físico (Group By Manual):** "Olhando para as cartas de Plantas, criem sub-montes por Tipo. Descubram qual tipo tem mais cartas e me entreguem essa pilha campeã! Valendo!"
-16. **Subconsulta Avançada (Subquery Humana):** "Descubram qual é o Clima do bioma Mata Atlântica na carta amarela. Usem esse resultado para ir até o índice verde e separar todas as Plantas que preferem esse mesmo clima! Valendo!"
-
-> 🔑 *O gabarito completo com as cartas-resposta de cada desafio e os códigos SQL equivalentes para rodar no computador estão disponíveis no arquivo `docs/gabarito_professor.md`.*
-
----
-
-## 🌍 Relação com o cotidiano
-
-No fechamento da atividade, consolide com a turma que a dinâmica que eles fizeram na mesa é exatamente o que acontece quando usamos a tecnologia no cotidiano:
-* **Instagram / TikTok:** Quando você clica em uma hashtag, o servidor faz uma busca parecida com a da *Rodada 1 (Filtro Simples)*.
-* **E-Commerce (Mercado Livre/Amazon):** Quando você pesquisa por *"Tênis de Corrida"* e filtra por *"Tamanho 41"* e *"Frete Grátis"*, o banco de dados deles usa a lógica exata do filtro composto da *Rodada 2 (Filtros Combinados)*.
-* **Big Data e Sistemas Governamentais:** O cruzamento espacial feito pelas UFs para mapear riscos ambientais simula as consultas automatizadas usadas por cientistas de dados na preservação ambiental.
-
----
-
-## Como Replicar ou Modificar este Projeto
-
-Se você é desenvolvedor ou professor e deseja adicionar novas cartas ou perguntas:
-
-1.  Clone o repositório:
-    ```bash
-    git clone [https://github.com/seu-usuario/ecodex-desplugado.git](https://github.com/seu-usuario/ecodex-desplugado.git)
-    ```
-2.  Para alterar os dados das cartas, modifique a tabela bruta em `data/dataset_original.csv`.
-3.  O código em HTML/CSS lerá o arquivo editado para renderizar o novo visual das cartas automaticamente prontas para impressão.
-
----
 
 ## Licença
 
