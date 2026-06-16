@@ -1,118 +1,143 @@
 # Oficina de Educação Financeira com ONLYOFFICE
 
-## 1. Objetivo da Atividade
 
-### 1.1. Objetivo Geral
-O objetivo desta atividade integrada é capacitar os estudantes na utilização de ferramentas digitais de produtividade voltadas a escritório — especificamente os editores de planilhas e de textos da suíte ONLYOFFICE — como instrumentos para a organização, análise, interpretação e relato de dados financeiros do cotidiano. Busca-se, por meio de uma abordagem prática e contextualizada, promover de forma simultânea a alfabetização digital, o letramento funcional e a educação financeira, fornecendo subsídios teóricos e instrumentais para que sujeitos historicamente marginalizados do sistema educacional desenvolvam autonomia socioeconômica e competências essenciais exigidas pelo mundo do trabalho contemporâneo.
+## Apresentação
 
-### 1.2. Objetivos Específicos
+Este material apresenta uma proposta de atividade interdisciplinar voltada a educação financeira e inclusão digital. Foi desenvolvida especificamente para a Educação de Jovens e Adultos (EJA), em contexto de Educação Profissional e Educação Especial integrados. O material foi produzido como atividade prática da componente curricular Projeto Interdisciplinar de Licenciatura em Computação (CIC0207) do curso de Computação da Universidade de Brasília (UnB), sob a docência e orientação da Professora Doutora Letícia Lopes Leite, no primeiro semestre letivo de 2026. A iniciativa busca conectar o desenvolvimento do pensamento computacional e o domínio de softwares de escritório a situações do cotidiano dos estudantes, utilizando a suíte de produtividade gratuita e de código aberto ONLYOFFICE como principal ferramenta.
 
-#### A) Dimensão Técnico-Tecnológica e de Inclusão Digital
-No âmbito do desenvolvimento do pensamento computacional e da proficiência digital, a atividade visa romper a barreira do analfabetismo tecnológico, comum em parcelas da população de EJA que não vivenciaram a transição digital de forma inclusiva[cite: 1]. Os objetivos específicos nesta dimensão compreendem:
-*   **Domínio de Interface:** Familiarizar o estudante com o ambiente operacional de uma suíte de escritório moderna, compreendendo a disposição de menus, barras de ferramentas e a lógica de navegação estruturada de softwares de produtividade.
-*   **Manipulação de Planilhas Eletrônicas:** Instruir os alunos na criação, formatação e preenchimento de tabelas bidimensionais, compreendendo a interseção de linhas e colunas como células de armazenamento de dados quantitativos.
-*   **Automação de Cálculos Matemáticos:** Capacitar os estudantes a aplicar e replicar fórmulas lógicas e aritméticas fundamentais, tais como `=soma()` e `=média()`, compreendendo a lógica interna dos operadores computacionais e a importância da automação para a redução de erros em processos manuais.
-*   **Representação Visual de Dados:** Desenvolver a habilidade de converter dados numéricos tabulares em gráficos de colunas alinhadas, ensinando o aluno a configurar e interpretar eixos, legendas e variáveis visuais.
-*   **Integração Cross-Media entre Aplicações:** Ensinar o fluxo de trabalho interdisciplinar que envolve a exportação de dados estruturados na planilha e sua importação e diagramação em um relatório formatado em editor de texto, simulando rotinas corporativas e administrativas reais.
-*   **Gerenciamento de Arquivos:** Estimular boas práticas de organização de diretórios, incluindo o salvamento correto de arquivos no armazenamento local e a adoção de nomenclaturas padronizadas e identificáveis.
+A metodologia aqui descrita foi aplicada, no formato de oficina, no Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), localizado na Asa Sul, sob a orientação e supervisão do Professor Nelson Torres. A aplicação ocorreu durante a Semana Escolar de Combate ao Machismo e a Violência contra a Mulher, realizada entre os dias 23 e 27 de maio de 2026. Embora a semana escolar mencionada tenha acontecido com temática definida; palestras, oficinas, workshops e apresentação de trabalhos com outros temas aconteciam em paralelo, incluindo a oficina proposta neste material. 
 
-#### B) Dimensão Cognitivo-Matemática e Educação Financeira
-A matemática financeira muitas vezes é apresentada de forma abstrata, o que afasta o estudante que lida com o orçamento doméstico de forma puramente intuitiva. Esta atividade tem como objetivo materializar esses conceitos, convertendo a experiência de vida do estudante em conhecimento matemático formalizado:
-*   **Sistematização da Economia Doméstica:** Propiciar ao aluno a percepção analítica de suas próprias despesas de consumo (aluguel, água, energia, internet, mercado, padaria, feira, farmácia), permitindo-lhe categorizar gastos fixos e variáveis.
-*   **Construção do Pensamento Estatístico Básico:** Estimular a compreensão real do conceito de "média mensal" de gastos, capacitando o aluno a identificar sazonalidades, picos de consumo e anomalias nas contas da residência, utilizando essa métrica para prever despesas futuras.
-*   **Tomada de Decisão Baseada em Dados:** Capacitar o estudante a interpretar os resultados totais e parciais obtidos por meio das planilhas para que ele possa realizar planejamentos financeiros familiares conscientes, identificando gargalos orçamentários (ex: gastos excessivos em categorias supérfluas) e traçando metas de economia.
+A Oficina de Educação Financeira com ONLYOFFICE propõe a estruturação dos exercícios de informática em níveis progressivos de dificuldade, permitindo que a atividade acolha e respeite estudantes com diferentes tempos de aprendizado e necessidades específicas. O método mostrou-se efetivo para todos os participantes da oficina, respondendo tanto às demandas de alunos recém-letrados e recém-numerados quanto às necessidades de adaptação e acessibilidade pedagógica de alunos atípicos e com deficiência. Dessa forma, o material aqui proposto torna-se uma possibilidade replicável por outros professores em contextos educacionais similares que pretendam integrar a inclusão digital e o domínio de ferramentas de escritório ao ensino de matemática, produção textual e educação financeira.
 
-#### C) Dimensão Sociolinguística e Letramento Funcional
-Considerando que a EJA atende estudantes em diferentes fases de alfabetização linguística, a atividade estabelece objetivos específicos para o desenvolvimento da comunicação escrita e interpretativa:
-*   **Desenvolvimento do Gênero Textual Administrativo:** Orientar o estudante na estruturação de um relatório técnico simples (Título, Introdução de Dados e Conclusão), exercitando a clareza, a concisão e a formalidade na exposição de fatos textuais combinados com elementos visuais.
-*   **Leitura Instrumental de Instruções Algorítmicas:** Exercitar a leitura interpretativa por meio do acompanhamento do roteiro impresso, exigindo que o aluno decodifique sequências de comandos logicamente encadeados para obter o resultado computacional esperado.
+Luan Moura
+
+Aluno do curso de Computação
+
+## Objetivo da Atividade
+
+### Objetivo Geral
+Capacitar os estudantes na utilização de planilhas eletrônicas e editores de texto da suíte ONLYOFFICE, aplicando essas ferramentas na organização, análise e relato de dados financeiros do cotidiano. A atividade busca integrar a inclusão digital, o desenvolvimento do raciocínio matemático e a expressão escrita por meio do gerenciamento do orçamento doméstico.
+
+### Objetivos Específicos
+
+#### Dimensão Técnica e Digital
+
+* **Uso da Interface**: Familiarizar o aluno com o ambiente de um software de escritório, compreendendo a navegação por menus e barras de ferramentas.
+* **Manipulação de Planilhas**: Ensinar a criação, a formatação e o preenchimento de tabelas organizadas em linhas e colunas.
+* **Automação de Cálculos**: Instruir a aplicação prática de fórmulas básicas de cálculo, como =SOMA() e =MÉDIA().
+* **Construção de Gráficos**: Desenvolver a habilidade de converter dados numéricos em gráficos para facilitar a leitura das informações.
+* **Integração entre Documentos**: Ensinar o processo de transferir os dados e gráficos da planilha para um relatório estruturado no editor de texto.
+* **Organização de Arquivos**: Estimular rotinas de salvamento e nomenclatura correta dos arquivos criados.
+
+#### Dimensão Matemática e Financeira
+
+* **Mapeamento de Gastos**: Auxiliar o estudante a identificar e registrar suas despesas (como moradia, alimentação e serviços), separando custos fixos e variáveis.
+* **Cálculo de Médias**: Utilizar o conceito matemático de média para compreender a oscilação dos gastos ao longo dos meses e planejar despesas futuras.
+* **Tomada de Decisão**: Capacitar o aluno a interpretar os totais da planilha para identificar excessos e traçar metas de economia doméstica.
+
+#### Dimensão de Leitura e Escrita
+* **Produção de Relatório**: Orientar a escrita de um documento administrativo simples, dividido em introdução, apresentação dos dados e conclusão.
+* **Leitura Instrumental**: Exercitar a interpretação de texto por meio do acompanhamento do roteiro passo a passo para a execução dos exercícios nos computadores.
 
 
-## 2. Disciplinas e Conteúdos Relacionados
-* **Matemática (Educação Financeira):** Operações básicas, cálculo de médias simples, soma de despesas, interpretação de gráficos e tabelas.
-* **Língua Portuguesa:** Produção de texto de gênero textual administrativo/relatório, leitura e interpretação de enunciados instrucionais.
-* **Tecnologia e Informática:** Conceito de suíte de escritório, organização de arquivos no sistema operacional, salvamento e nomenclatura de documentos.
+## Disciplinas e Conteúdos Relacionados
+* **Matemática:** Operações básicas, cálculo de médias simples, soma de despesas, interpretação de gráficos e tabelas.
+* **Língua Portuguesa:** Produção de texto de gênero textual administrativo, leitura e interpretação de enunciados instrucionais.
+* **Informática:** Conceito de suíte de escritório, uso de ferramentas de escritório, organização de arquivos no sistema operacional e salvamento de documentos.
 
-## 3. Habilidades (BNCC)
+## Habilidades da Base Nacional Comum Curricular (BNCC)
 
-### BNCC Convencional
-* **(EF07MA37):** Interpretar e analisar dados apresentados em gráficos de colunas ou barras, tabelas de dupla entrada, entre outros, para fazer previsões ou tomar decisões.
-* **(EF09MA05):** Resolver e elaborar problemas que envolvam porcentagem e planejamento financeiro, focando em situações reais de mercado e consumo.
-* **(EF69LP22):** Produzir textos de caráter argumentativo ou relatórios simples, adequando o texto à estrutura demandada pelo gênero.
+* **(EF07MA37):** Interpretar e analisar dados apresentados em gráfico de setores divulgados pela mídia e compreender quando é possível ou conveniente sua utilização.
+* **(EF09MA05):** Resolver e elaborar problemas que envolvam porcentagens, com a ideia de aplicação de percentuais sucessivos e a determinação das taxas percentuais, preferencialmente com o uso de tecnologias digitais, no contexto da educação financeira.
+* **(EF69LP22):** Produzir, revisar e editar textos reivindicatórios ou propositivos sobre problemas que afetam a vida escolar ou da comunidade, justificando pontos de vista, reivindicações e detalhando propostas (justificativa, objetivos, ações previstas etc.), levando em conta seu contexto de produção e as características dos gêneros em questão.
+* **(EF03CO05):** Compreender que dados são estruturados em formatos específicos dependendo da informação armazenada.
+* **(EF07CO03):** Construir soluções computacionais de problemas de diferentes áreas do conhecimento, de forma individual e colaborativa, selecionando as estruturas de dados e técnicas adequadas, aperfeiçoando e articulando saberes escolares.
 
-### BNCC Computação (Complemento)
-* **(IE09CO01):** Utilizar ferramentas de produtividade (editores de texto, planilhas e apresentações) de forma eficaz para expressar ideias e organizar informações.
-* **(IE09CO03):** Organizar, analisar e representar dados utilizando recursos digitais para identificar padrões e extrair conclusões.
+## Nível ou Modalidade de Ensino
+Anos finais do Ensino Fundamental e Ensino Médio para Educação de Jovens e Adultos (EJA) em contexto de Educação Profissional e Educação Especial integrados. 
 
-## 4. Nível ou Modalidade de Ensino
-Educação de Jovens e Adultos (EJA) – Anos finais do Ensino Fundamental e Ensino Médio.
-
-## 5. Materiais Necessários para Aplicação
+## Materiais Necessários para Aplicação
 * Laboratório de informática com um computador por aluno.
-* Computador do professor conectado a uma tela de projeção (Data Show ou TV).
+* Computador do professor conectado a uma tela de projeção (projetor ou televisão).
 * Suíte de escritório **ONLYOFFICE** instalada em todas as máquinas.
-* Roteiros de atividades impressos em papel (com fonte ampliada para estudantes com baixa visão).
+* Roteiros de atividades impressos em papel (com fonte ampliada para estudantes com baixa visão) ou disponibilização do arquivo digital em PDF ou preferencialmente em HTML.
 * Canetas/lápis para anotações rápidas.
 
-## 6. Contexto de Aplicação
+## Contexto de Aplicação
 
-Esta atividade foi criada e testada em uma escola pública do Distrito Federal, durante uma semana de atividades pedagógicas interdisciplinares. Nesse período, a escola mudou sua rotina normal: os professores e estagiários propuseram oficinas práticas, e os alunos puderam escolher e se inscrever nas atividades que mais tinham interesse. A oficina de Educação Financeira com o ONLYOFFICE foi uma dessas opções.
+Esta atividade foi aplicada no Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), localizado na Asa Sul, durante a Semana Escolar de Combate ao Machismo e a Violência contra a Mulher. Nesse período, a instituição organizou uma programação diferenciada com palestras, oficinas e workshops de temáticas variadas que ocorriam em paralelo, permitindo que os estudantes escolhessem as atividades de seu interesse. A Oficina de Educação Financeira com ONLYOFFICE integrou essa programação.
 
-Essa escola tem uma característica muito importante: ela atende, ao mesmo tempo, turmas de Educação de Jovens e Adultos (EJA), cursos profissionalizantes e alunos da educação especial. Por isso, o público que participou da oficina era muito variado e misturava pessoas de realidades bem diferentes. 
+A instituição destaca-se por atender, simultaneamente, turmas de Educação de Jovens e Adultos (EJA), cursos profissionalizantes e estudantes da Educação Especial. Por essa razão, o público participante reuniu pessoas com diferentes realidades e idades, variando entre 21 e 62 anos. A turma foi composta por: 
 
-A turma que fez a atividade tinha estudantes com idades entre 21 e 62 anos. Entre os participantes, havia:
-*   Pessoas que estavam aprendendo a ler e a escrever agora (recém-alfabetizadas);
-*   Pessoas que estavam aprendendo a fazer contas básicas agora (recém-numeradas);
-*   Alunos atípicos e com diferentes tipos de deficiência;
-*   Alunos com baixa visão (que enxergam com dificuldade);
-*   Alunos com dificuldade de locomoção ou limitações físicas.
+* Alunos recém-letrados e recém-numerados;
+* Alunos atípicos e/ou com deficiência; e
+* Alunos com restrições de mobilidade ou limitações físicas.
 
-Como o grupo tinha pessoas com necessidades tão diferentes, o projeto foi planejado para que ninguém ficasse para trás. O ritmo das explicações e a organização da sala foram pensados para respeitar o tempo de aprendizado de cada um. 
-
-A arrumação dos computadores garantiu espaço livre para quem usa cadeira de rodas ou tem dificuldade de andar. A tela de projeção foi regulada para que todos enxergassem bem e os roteiros impressos foram feitos com letras maiores para ajudar os alunos com baixa visão. Assim, o laboratório de informática funcionou como um espaço acolhedor, onde a tecnologia serviu para ajudar e incluir todo mundo, independentemente da idade ou da limitação de cada aluno[cite: 1].
+Para atender a essa diversidade, as atividades do projeto foram estruturadas de forma que o ritmo respeitasse o tempo de aprendizado individual de cada participante. O laboratório de informática está organizado para garantir o livre acesso e a circulação de pessoas com dificuldades de locomoção. Os roteiros de apoio foram impressos em tamanho A3 com fontes ampliadas para atender aos alunos com baixa visão, ou disponibilizados em formato HTML responsivo para leitura direta na tela do computador. Dessa maneira, o ambiente da oficina oportunizou acessibilidade a todos os participantes.
 
 
-## 7. Detalhamento da Atividade (Etapas de Aplicação)
+## Detalhamento da Atividade (Etapas de Aplicação)
 
-### Etapa 1: Dinâmica de Quebra-Gelo (15 min)
-* **Nome sugerido:** *A Teia do Dinheiro e das Expectativas*.
-* **Como aplicar:** O professor inicia segurando um novelo de lã. Ele diz seu nome, de qual turma faz parte e responde à pergunta: *"Se você ganhasse um prêmio em dinheiro hoje, qual a primeira coisa que você organizaria na sua vida?"*. O professor segura a ponta do fio e joga o novelo para um estudante. O processo se repete até que todos tenham se apresentado e uma "teia" tenha se formado conectando o grupo. 
-* *Nota de acessibilidade:* Para alunos com dificuldade de locomoção, o novelo pode ser entregue em mãos por um monitor, garantindo a inclusão sem expor o estudante.
+### Etapa 1: Apresentação (15 min)
+* O professor inicia com uma fala de boas-vindas e explica em linhas gerais o que é a Oficina de Educação Financeira com ONLYOFFICE e quais os seus objetivos. 
+* O professor avisa que todos farão uma rápida apresentação, começando por ele, e que as falas devem responder às seguintes perguntas:
+  * Qual seu nome?
+  * Qual sua turma?
+  * Em qual bairro ou cidade você mora?
+  * Se você ganhasse 10 mil reais em dinheiro hoje, o que você faria?
+  * Quem você escolhe para se apresentar agora? 
+> O professor poderá escrever as perguntas no quadro ou projetar na tela. Todos devem se apresentar.
 
 ### Etapa 2: Mini-Palestra sobre Educação Financeira (30 min)
-* **Abordagem pedagógica:** Evitar jargões técnicos do mercado financeiro. O foco deve ser a **economia doméstica realista**. 
-* **Tópicos a abordar:** 1. A diferença entre *Desejos* (o que eu quero ter) e *Necessidades* (o que eu preciso para viver).
-    2. A importância de visualizar os gastos: *"O dinheiro some quando a gente não anota"*.
-    3. Como pequenas contas diárias (como a padaria) acumulam no fim do mês.
+* O professor falará sobre educação financeira no contexto doméstico, evitando jargões da área financeira. Caso utilize algum termo técnico, ele deve explicá-lo usando uma linguagem simples. Sua fala deve contemplar os seguintes tópicos: 
+  * A diferença entre *Desejos* (o que eu quero ter) e *Necessidades* (o que eu preciso para viver).
+  * A importância de visualizar os gastos, porque *o dinheiro vai embora quando a gente não controla*.
+  * Como pequenas contas diárias (como a padaria) acumulam no fim do mês.
+  * A importância de guardar algum dinheiro para gastos futuros.
 
 ### Etapa 3: Apresentação da Ferramenta ONLYOFFICE (45 min)
-* **Uso da projeção:** O professor abre a interface na tela grande.
-* **Justificativa de escolha da ferramenta (pontos-chave a explicar):**
-    * **Gratuita e Livre:** Os estudantes podem baixar em casa sem pirataria ou custos.
-    * **Compatibilidade Máxima:** Abre e salva arquivos nos formatos `.docx` e `.xlsx` nativamente, garantindo que o mercado de trabalho reconheça o que fizerem ali.
-    * **Interface Familiar:** Visual idêntico ao Microsoft Office, facilitando a curva de aprendizado.
+* O professor deverá explicar o motivo da escolha do ONLYOFFICE:
+  * É uma ferramenta gratuita.
+  * Pode ser usada em computadores e dispositivos móveis.
+  * Tem uma aparência muito semelhante à do Microsoft Office.
+  * É compatível nativamente com arquivos do tipo `.docx` e `.xlsx`, amplamente utilizados no mercado de trabalho.
+* O professor abre a interface do ONLYOFFICE na tela de projeção e explica a navegação pela ferramenta. A explicação deve conter:
+  * Como abrir uma nova planilha eletrônica e um novo documento.
+  * O que são células, linhas e colunas.
+  * Como inserir, selecionar, editar e excluir informações.
+  * Como inserir as fórmulas `=SOMA()` e `=MÉDIA()` no editor de planilhas.
+  * Como copiar, recortar e colar informações.
+  * Como navegar pelos menus, faixas de opções e ferramentas (especialmente aquelas que serão usadas nos exercícios).
+  * Como salvar, editar, renomear, mover e excluir arquivos.
 
-### Etapa 4: Execução do Roteiro Prático (60 min)
-* [cite_start]**Orientação:** Distribuição da folha impressa (Nível 1). 
-* **Papel do docente e monitores:** Circular pela sala. Para os recém-alfabetizados, ler as instruções pausadamente. Apoiar o uso do mouse e teclado. [cite_start]O professor pode demonstrar a inserção das fórmulas `=soma()` e `=média()` no projetor caso perceba uma dúvida coletiva.
+### Etapa 4: Execução da Atividade Prática (60 min)
+* O professor distribui a atividade de Nível 1 impressa para todos os alunos.
+* O professor abre a atividade de Nível 1 na tela de projeção e faz a leitura coletiva, complementando com explicações os trechos que julgar necessários.
+* Após a leitura, a execução da atividade se inicia. Será papel do professor e dos monitores:
+  * Circular pela sala de aula para acompanhar o desenvolvimento dos alunos;
+  * Ler as instruções pausadamente ou reexplicá-las para os estudantes recém-letrados;
+  * Apoiar individualmente o uso do mouse e do teclado; e
+  * Demonstrar a inserção das fórmulas `=SOMA()` e `=MÉDIA()` no projetor caso perceba uma dúvida coletiva da turma.
 
----
+## Variações e Extensões
+A atividade da oficina utiliza uma metodologia adaptativa baseada em níveis de dificuldade progressivos. Todos os alunos começam no mesmo ponto de partida, respeitando o ritmo individual de aprendizagem; à medida que o aluno conclui um nível, ele recebe o desafio seguinte. No início da oficina, o número total de níveis NÃO deve ser informado.
 
-## 9. Variações e Extensões (Metodologia de Desafios Progressivos)
-A atividade utiliza uma abordagem adaptativa baseada em trilhas de aprendizagem. Todos começam no mesmo ponto de partida, respeitando o ritmo individual:
-
-1.  **Nível 1 (Entregue a todos):** Criação da planilha de despesas domésticas básicas (Aluguel, Água, Energia), cálculo de Soma/Média e geração do primeiro gráfico de colunas.
-2.  **Nível 2:** Entregue para àqueles alunos que concluíram o nível anterior. O estudante recebe o material para o próximo desafio, que envolve aplicar formatação condicional (ex: pintar de vermelho os gastos que passaram de R$ 200,00) e criar projeções de economia.
-3.  **Nível 3:** Entregue para àqueles alunos que concluíram o nível anterior. Inserção de fórmulas lógicas (como a função `=SE()`) para categorizar se o orçamento do mês fechou "No Azul" ou "No Vermelho".
+1.  **Nível 1:** Criação de uma planilha com despesas domésticas fictícias (Aluguel, Água, Energia) referentes a três meses. Inclui o cálculo de Soma/Média, a geração de um gráfico de colunas e a transposição desses dados para um documento de texto, com a inclusão de título e parágrafos descritivos.
+2.  **Nível 2:** Ampliação da planilha anterior com o acréscimo de novas despesas e a projeção de gastos para todos os meses do ano. O aluno deve criar uma seção de receitas, calcular o saldo final, atualizar o gráfico no documento de texto e redigir uma breve análise identificando três itens possíveis de economia.
+3.  **Nível 3:** Adaptação da planilha para o registro e análise das receitas e os gastos pessoais ou familiares do próprio estudante.
 
 A atividade encerra-se quando o tempo estipulado expirar, garantindo que mesmo quem concluiu apenas o Nível 1 tenha absorvido a competência mínima proposta.
 
-## 10. Anexos (Links das Atividades)
-> *Nota pedagógica: Os links abaixo direcionam para páginas HTML responsivas com CSS embutido, facilitando a leitura em smartphones e a impressão adaptada com fontes ampliadas para estudantes com baixa visão.*
+## Anexos
 
-* [Acessar Atividade - Nível 1](https://seu-link-aqui.com/nivel1)
-* [Acessar Atividade - Nível 2](https://seu-link-aqui.com/nivel2)
-* [Acessar Atividade - Nível 3](https://seu-link-aqui.com/nivel3)
+* [Atividade do Nível 1](docs/atividade1.html)
+* [Atividade do Nível 2](docs/atividade2.html)
+* [Atividade do Nível 3](docs/atividade3.html)
 
-## 11. Conclusão
-[cite_start]A aplicação deste projeto demonstrou que a computação e a educação financeira, quando aliadas a ferramentas acessíveis e gratuitas como o ONLYOFFICE, são poderosos vetores de inclusão social na EJA[cite: 2, 4]. [cite_start]A estrutura modular permitiu acolher desde o estudante com dificuldades severas de alfabetização até aqueles que buscavam aperfeiçoamento para o mercado de trabalho, provando o valor do planejamento interdisciplinar no ensino público[cite: 1].
+> Os links direcionam para páginas HTML responsivas com CSS embutido, facilitando a leitura em smartphones e a impressão em formato adaptado com possibilidade de ampliação ou aplicação de alto contraste para estudantes com baixa visão.
+
+## Conclusão
+
+A aplicação da Oficina de Educação Financeira com ONLYOFFICE, no contexto do Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), mostrou que ensinar informática e educação financeira torna-se mais efetivo quando os exercícios usam exemplos do dia a dia e comandos instrucionais exemplificados. Com a aplicação do ONLYOFFICE, os estudantes conseguiram exercitar habilidades digitais, matemáticas e textuais de forma prática para organizar um orçamento doméstico.
+
+A divisão da atividade em níveis de dificuldade foi fundamental para respeitar o tempo de aprendizado e de execução de cada pessoa. Esse método permitiu que alunos recém-letrados e com deficiência realizassem as tarefas no seu próprio ritmo. Dessa forma, o projeto interdisciplinar cumpriu seu papel ao oferecer um roteiro simples e fácil de ser reaplicado por outros professores que queiram unir inclusão digital, matemática, leitura e escrita em salas de aula que interseccionam com a Educação Especial.

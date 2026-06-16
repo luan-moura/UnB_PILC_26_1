@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática</title>
+    <style>
+        /* Paleta de Cores Unificada - Padrão ONLYOFFICE */
+        :root {
+            --bg-color: #f4f4f4; 
+            --text-color: #333333; 
+            --primary-color: #1f4e79; /* Azul oficial unificado */
+            --border-color: #cccccc; 
+            --card-bg: #ffffff; 
+            --oo-header-bg: #e6e6e6; /* Cinza dos eixos A, B, C / 1, 2, 3 */
+            --oo-accent-bg: #f2f2f2; /* Cinza-claro do balde de tinta (cabeçalho/totais) */
+            --font-size-base: 18px;
+            --table-bg: #ffffff;
+            --table-text: #000000;
+        }
+
+        /* Modo de Altíssimo Contraste Corrigido */
+        body.high-contrast {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --primary-color: #ffff00;
+            --border-color: #ffffff;
+            --card-bg: #121212;
+            --oo-header-bg: #333333;
+            --oo-accent-bg: #262626; /* Fundo destacado acessível no contraste */
+            --table-bg: #000000;
+            --table-text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Barra de Acessibilidade Responsiva */
+        .accessibility-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .accessibility-bar button {
+            flex: 1;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .accessibility-bar button:hover {
+            background-color: var(--bg-color);
+        }
+
+        /* Títulos */
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 40px;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 25px;
+            color: var(--primary-color);
+        }
+        
+        body.high-contrast h3 {
+            color: var(--text-color);
+        }
+
+        .box-info {
+            background-color: var(--bg-color);
+            border-left: 6px solid var(--primary-color);
+            padding: 18px;
+            margin: 25px 0;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .box-text-example {
+            background-color: var(--bg-color);
+            border: 2px dashed var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-style: italic;
+        }
+
+        /* Interface das Planilhas Simuladas */
+        .oo-spreadsheet-mockup {
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        table.oo-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            background-color: var(--table-bg);
+        }
+
+        table.oo-table th.oo-axis, table.oo-table td.oo-axis {
+            background-color: var(--oo-header-bg);
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            user-select: none;
+            padding: 8px 0;
+        }
+
+        table.oo-table td.oo-axis {
+            width: 40px;
+        }
+
+        table.oo-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            color: var(--table-text);
+            text-align: left;
+        }
+
+        .text-cell { text-align: left !important; }
+        .num-cell { text-align: right !important; font-family: monospace; font-size: 1.05rem; }
+        
+        /* Classes de formatação simulada da tabela */
+        .oo-header-row td {
+            background-color: var(--oo-accent-bg);
+            font-weight: bold;
+        }
+
+        .oo-total-row td {
+            background-color: var(--oo-accent-bg);
+            font-weight: bold;
+        }
+
+        .result-cell {
+            background-color: var(--oo-accent-bg);
+            font-weight: bold;
+        }
+
+        ol, ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 14px;
+        }
+
+        code {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            font-family: Consolas, Monaco, monospace;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #c42b1c;
+            border-radius: 3px;
+        }
+        
+        body.high-contrast code {
+            color: #ffff00;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 600px) {
+            .accessibility-bar {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .accessibility-bar button {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            .accessibility-bar { display: none; }
+            .container { box-shadow: none; border: none; padding: 0; }
+            body { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="accessibility-bar" aria-label="Controles de Acessibilidade">
+        <button onclick="toggleContrast()">Altíssimo Contraste</button>
+        <button onclick="changeFontSize(2)">Aumentar Tamanho do Texto</button>
+        <button onclick="changeFontSize(-2)">Diminuir Tamanho do Texto</button>
+    </nav>
+
+    <main>
+        <h1>Atividade Prática</h1>
+        
+        <div class="box-info">
+            <strong>Objetivo Geral:</strong> Aprender a usar o editor de planilhas do ONLYOFFICE para organizar valores e criar gráficos. Depois, transferir essas informações para um documento de texto estruturado.
+        </div>
+
+        <section>
+            <h2>Parte 1: Criando a Planilha de Gastos</h2>
+            
+            <ol>
+                <li>Abra o programa <strong>ONLYOFFICE</strong> no seu computador.</li>
+                <li>Na tela inicial, clique na opção <strong>Planilha</strong> (ícone de cor verde) para abrir um arquivo em branco.</li>
+                <li>Clique em cada quadradinho (célula) e digite as palavras e números exatamente como mostra a tabela abaixo:</li>
+            </ol>
+
+            <div class="oo-spreadsheet-mockup">
+                <table class="oo-table">
+                    <thead>
+                        <tr>
+                            <th class="oo-axis"></th>
+                            <th class="oo-axis" scope="col">A</th>
+                            <th class="oo-axis" scope="col">B</th>
+                            <th class="oo-axis" scope="col">C</th>
+                            <th class="oo-axis" scope="col">D</th>
+                            <th class="oo-axis" scope="col">E</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="oo-axis">1</td>
+                            <td class="text-cell">Mês</td>
+                            <td class="text-cell">Janeiro</td>
+                            <td class="text-cell">Fevereiro</td>
+                            <td class="text-cell">Março</td>
+                            <td class="text-cell">Média</td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">2</td>
+                            <td class="text-cell">Aluguel</td>
+                            <td class="num-cell">400</td>
+                            <td class="num-cell">400</td>
+                            <td class="num-cell">400</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">3</td>
+                            <td class="text-cell">Água</td>
+                            <td class="num-cell">97</td>
+                            <td class="num-cell">90</td>
+                            <td class="num-cell">92</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">4</td>
+                            <td class="text-cell">Energia</td>
+                            <td class="num-cell">105</td>
+                            <td class="num-cell">99</td>
+                            <td class="num-cell">108</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">5</td>
+                            <td class="text-cell">Internet</td>
+                            <td class="num-cell">49</td>
+                            <td class="num-cell">49</td>
+                            <td class="num-cell">49</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">6</td>
+                            <td class="text-cell"><strong>Total</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Inclusão dos Cálculos (Fórmulas):</h3>
+            <ol>
+                <li><strong>Calcular o Total de Janeiro:</strong> Clique na célula <code>B6</code>. Digite exatamente a fórmula: <code>=SOMA(B2:B5)</code> e aperte a tecla <strong>Enter</strong>.</li>
+                <li><strong>Calcular o Total de Fevereiro:</strong> Clique na célula <code>C6</code>. Digite a fórmula: <code>=SOMA(C2:C5)</code> e aperte a tecla <strong>Enter</strong>.</li>
+                <li><strong>Calcular o Total de Março:</strong> Clique na célula <code>D6</code>. Digite a fórmula: <code>=SOMA(D2:D5)</code> e aperte a tecla <strong>Enter</strong>.</li>
+                <li><strong>Calcular a Média do Aluguel:</strong> Clique na célula <code>E2</code>. Digite exatamente a fórmula: <code>=MÉDIA(B2:D2)</code> e aperte a tecla <strong>Enter</strong>.</li>
+                <li><strong>Calcular a Média da Água:</strong> Clique na célula <code>E3</code>. Digite a fórmula: <code>=MÉDIA(B3:D3)</code> e aperte a tecla <strong>Enter</strong>.</li>
+                <li><strong>Calcular a Média da Energia:</strong> Clique na célula <code>E4</code>. Digite a fórmula: <code>=MÉDIA(B4:D4)</code> e aperte a tecla <strong>Enter</strong>.</li>
+                <li><strong>Calcular a Média da Internet:</strong> Clique na célula <code>E5</code>. Digite a fórmula: <code>=MÉDIA(B5:D5)</code> e aperte a tecla <strong>Enter</strong>.</li>
+            </ol>
+
+            <h3>Formatação da Tabela:</h3>
+            <ol>
+                <li>Clique no meio da célula <code>A1</code>, segure e arraste o mouse até a célula <code>E6</code> para selecionar a tabela inteira. No menu superior (aba <b>Página Inicial</b>), procure o botão de <b>Bordas</b> (quadradinho com uma cruz dentro), clique na setinha ao lado dele e escolha a opção <b>Todas as Bordas</b>.</li>
+                <li>Clique no meio da célula <code>B2</code>, segure o clique e arraste o mouse até a célula <code>D5</code>. Na aba <b>Página Inicial</b>, clique na caixinha onde está escrito "Geral" e mude para a opção <b>Moeda</b>. Todos os números ganharão o símbolo de <code>R$</code>.</li>
+                <li>Clique no meio da célula <code>A1</code> (Mês) e arraste até a célula <code>E1</code> (Média). No menu superior, clique no botão com a letra <b>B</b> (Negrito). Depois, clique no botão do <b>Balde de Tinta</b> (Cor de Preenchimento) e escolha a cor cinza-claro para pintar o fundo dos títulos.</li>
+                <li>Clique na célula <code>A6</code> (Total) e arraste até a célula <code>D6</code>. Clique no botão <b>B</b> (Negrito) e depois no <b>Balde de Tinta</b> para pintar o fundo com o mesmo cinza-claro.</li>
+                <li>A tabela abaixo mostra exatamente como a sua planilha deve ficar no computador após todas as fórmulas e formatações aplicadas:</li>
+            </ol>
+
+            <div class="oo-spreadsheet-mockup">
+                <table class="oo-table">
+                    <thead>
+                        <tr>
+                            <th class="oo-axis"></th>
+                            <th class="oo-axis" scope="col">A</th>
+                            <th class="oo-axis" scope="col">B</th>
+                            <th class="oo-axis" scope="col">C</th>
+                            <th class="oo-axis" scope="col">D</th>
+                            <th class="oo-axis" scope="col">E</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linha 1: Cabeçalho formatado com Balde de Tinta e Negrito -->
+                        <tr class="oo-header-row">
+                            <td class="oo-axis">1</td>
+                            <td class="text-cell">Mês</td>
+                            <td class="text-cell">Janeiro</td>
+                            <td class="text-cell">Fevereiro</td>
+                            <td class="text-cell">Março</td>
+                            <td class="text-cell">Média</td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">2</td>
+                            <td class="text-cell">Aluguel</td>
+                            <td class="num-cell">R$ 400,00</td>
+                            <td class="num-cell">R$ 400,00</td>
+                            <td class="num-cell">R$ 400,00</td>
+                            <td class="num-cell result-cell">R$ 400,00</td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">3</td>
+                            <td class="text-cell">Água</td>
+                            <td class="num-cell">R$ 97,00</td>
+                            <td class="num-cell">R$ 90,00</td>
+                            <td class="num-cell">R$ 92,00</td>
+                            <td class="num-cell result-cell">R$ 93,00</td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">4</td>
+                            <td class="text-cell">Energia</td>
+                            <td class="num-cell">R$ 105,00</td>
+                            <td class="num-cell">R$ 99,00</td>
+                            <td class="num-cell">R$ 108,00</td>
+                            <td class="num-cell result-cell">R$ 104,00</td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">5</td>
+                            <td class="text-cell">Internet</td>
+                            <td class="num-cell">R$ 49,00</td>
+                            <td class="num-cell">R$ 49,00</td>
+                            <td class="num-cell">R$ 49,00</td>
+                            <td class="num-cell result-cell">R$ 49,00</td>
+                        </tr>
+                        <!-- Linha 6: Totais formatados com Balde de Tinta e Negrito (A6 até D6) -->
+                        <tr class="oo-total-row">
+                            <td class="oo-axis">6</td>
+                            <td class="text-cell">Total</td>
+                            <td class="num-cell">R$ 651,00</td>
+                            <td class="num-cell">R$ 638,00</td>
+                            <td class="num-cell">R$ 649,00</td>
+                            <!-- E6 fica de fora do preenchimento conforme a instrução (A6 até D6) -->
+                            <td style="background-color: var(--bg-color); font-weight: normal; text-align: center; color: var(--text-color);"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Criação do Gráfico:</h3>
+            <ol>
+                <li>Clique com o mouse no meio da célula <code>A1</code> (onde está escrito Mês), segure o botão esquerdo pressionado e arraste o mouse até a célula <code>D5</code> (valor R$ 49,00 da Internet). Solte o botão. Toda essa área ficará azul.</li>
+                <li>No menu superior do programa, clique na aba chamada <strong>Inserir</strong>.</li>
+                <li>Clique no botão escrito <strong>Gráfico</strong> e escolha o modelo de <strong>Colunas</strong> (barras em pé). O gráfico surgirá na tela.</li>
+                <li><strong>Mudar o Nome do Gráfico:</strong> Dê dois cliques rápidos em cima do texto <em>"Título do Gráfico"</em> que aparece no topo do desenho das barras. Apague esse nome e digite o novo título: <code>Gastos do Trimestre</code>.</li>
+                <li><strong>Salvar o arquivo:</strong> No canto superior esquerdo, clique em <strong>Arquivo</strong>, escolha <strong>Salvar como</strong>, mude o nome do arquivo para <code>Relatorio-SEU-NOME</code> e salve no computador.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Parte 2: Criando o Relatório no Editor de Texto</h2>
+            
+            <ol>
+                <li>Mantenha a planilha aberta. Abra a tela inicial do ONLYOFFICE novamente e escolha a opção <strong>Documento</strong> (ícone de cor azul) para abrir uma folha de redação em branco.</li>
+                <li>Na primeira linha, digite o título: <code>RELATÓRIO DE DESPESAS MENSAL</code>. Pressione a tecla <strong>Enter</strong> duas vezes para criar espaço.</li>
+                <li>Digite o parágrafo abaixo para explicar o objetivo do seu documento:</li>
+                
+                <div class="box-text-example">
+                    Este relatório apresenta o controle de gastos domésticos do primeiro trimestre do ano. Os valores foram organizados em uma planilha eletrônica para calcular os totais mensais e as médias de cada despesa.
+                </div>
+
+                <li><strong>Copiar a Tabela:</strong> Volte para a sua janela da planilha. Clique no meio da célula <code>A1</code>, segure e arraste até a célula <code>E6</code> (pegando os totais e médias calculados). Clique com o botão direito do mouse em cima da área selecionada e selecione <strong>Copiar</strong> (ou pressione Ctrl+C).</li>
+                <li><strong>Colar a Tabela:</strong> Volte para o documento de texto. Dê um clique abaixo do texto que você escreveu, clique com o botão direito do mouse e selecione <strong>Colar</strong> (ou pressione Ctrl+V).</li>
+                <li>Aperte a tecla <strong>Enter</strong> para descer a linha e digite o parágrafo abaixo para explicar os dados da tabela:</li>
+
+                <div class="box-text-example">
+                    Abaixo da tabela, inserimos um gráfico de colunas para facilitar a visualização de qual despesa consumiu mais recursos no período pesquisado.
+                </div>
+
+                <li><strong>Copiar o Gráfico:</strong> Volte na planilha. Dê um clique em cima da linha fina que forma a borda externa do seu gráfico para selecioná-lo. Clique com o botão direito sobre ele e selecione <strong>Copiar</strong>.</li>
+                <li><strong>Colar o Gráfico:</strong> Volte ao documento de texto. Clique na linha em branco abaixo da tabela inserida e clique em <strong>Colar</strong> (ou pressione Ctrl+V).</li>
+                <li><strong>Salvar o Documento:</strong> Vá no menu <strong>Arquivo</strong>, selecione <strong>Salvar como</strong>, escreva o nome <code>Relatorio-SEU-NOME</code> e confirme o salvamento.</li>
+            </ol>
+        </section>
+    </main>
+
+</div>
+
+<script>
+    function toggleContrast() {
+        document.body.classList.toggle('high-contrast');
+    }
+
+    function changeFontSize(action) {
+        const body = document.body;
+        const currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
+        body.style.fontSize = (currentSize + action) + 'px';
+    }
+</script>
+
+</body>
+</html>
