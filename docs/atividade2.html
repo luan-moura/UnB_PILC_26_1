@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática 2 - Orçamento Anual Completo</title>
+        <style>
+        /* Paleta de Cores Unificada - Padrão ONLYOFFICE */
+        :root {
+            --bg-color: #f4f4f4; 
+            --text-color: #333333; 
+            --primary-color: #1f4e79; 
+            --border-color: #cccccc; 
+            --card-bg: #ffffff; 
+            --oo-header-bg: #e6e6e6; 
+            --oo-accent-bg: #f2f2f2; 
+            --font-size-base: 18px;
+            --table-bg: #ffffff;
+            --table-text: #000000;
+        }
+
+        /* Modo de Altíssimo Contraste Corrigido */
+        body.high-contrast {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --primary-color: #ffff00;
+            --border-color: #ffffff;
+            --card-bg: #121212;
+            --oo-header-bg: #333333;
+            --oo-accent-bg: #262626; 
+            --table-bg: #000000;
+            --table-text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Barra de Acessibilidade Responsiva */
+        .accessibility-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .accessibility-bar button {
+            flex: 1;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .accessibility-bar button:hover {
+            background-color: var(--bg-color);
+        }
+
+        /* Títulos */
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 40px;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 25px;
+            color: var(--primary-color);
+        }
+        
+        body.high-contrast h3 {
+            color: var(--text-color);
+        }
+
+        .box-info {
+            background-color: var(--bg-color);
+            border-left: 6px solid var(--primary-color);
+            padding: 18px;
+            margin: 25px 0;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .box-text-example {
+            background-color: var(--bg-color);
+            border: 2px dashed var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-style: italic;
+        }
+
+        /* Interface das Planilhas Simuladas */
+        .oo-spreadsheet-mockup {
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        table.oo-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+            background-color: var(--table-bg);
+        }
+
+        table.oo-table th.oo-axis, table.oo-table td.oo-axis {
+            background-color: var(--oo-header-bg);
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            user-select: none;
+            padding: 6px 0;
+        }
+
+        table.oo-table td.oo-axis {
+            width: 40px;
+        }
+
+        /* Célula Padrão - BLOQUEIO DE QUEBRA DE LINHA ADICIONADO AQUI */
+        table.oo-table td {
+            border: 1px dashed transparent;
+            padding: 6px 8px;
+            color: var(--table-text);
+            font-size: 14px;
+            white-space: nowrap; /* Impede a quebra de linha de valores e textos */
+        }
+
+        /* REGRAS DE BORDAS SOLICITADAS (A3:N6; A8:N17; A19:M20) */
+        table.oo-table tr.block-border td {
+            border: 1px solid var(--border-color);
+        }
+        table.oo-table tr.block-border td.no-right-border {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid transparent;
+        }
+
+        /* REGRAS DE TEXTO EM NEGRITO SOLICITADAS */
+        .fw-bold {
+            font-weight: bold !important;
+        }
+
+        .text-cell { text-align: left !important; }
+        .num-cell { text-align: right !important; font-family: monospace; }
+        
+        /* Cores de Cabeçalho e Destaque */
+        .oo-title-row {
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .oo-header-row td {
+            background-color: var(--oo-accent-bg);
+        }
+
+        .oo-total-row td {
+            background-color: var(--oo-accent-bg);
+        }
+
+        ol, ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 14px;
+        }
+
+        code {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            font-family: Consolas, Monaco, monospace;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #c42b1c;
+            border-radius: 3px;
+        }
+        
+        body.high-contrast code {
+            color: #ffff00;
+        }
+
+        @media (max-width: 600px) {
+            .accessibility-bar {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .accessibility-bar button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="accessibility-bar" aria-label="Controles de Acessibilidade">
+        <button onclick="toggleContrast()">Alto Contraste</button>
+        <button onclick="changeFontSize(2)">Aumentar Tamanho do Texto</button>
+        <button onclick="changeFontSize(-2)">Diminuir Tamanho do Texto</button>
+    </nav>
+
+    <main>
+        <h1>Atividade Prática 2</h1>
+        
+        <div class="box-info">
+            <strong>Objetivo Geral:</strong> Adaptar a sua planilha anterior do ONLYOFFICE para construir uma projeção anual completa de 12 meses (de Janeiro a Dezembro), seguindo exatamente o modelo do anexo <b>image_cda8ca.png</b>. Vamos calcular as médias (M), somas (S) e a diferença do saldo (D).
+        </div>
+
+        <section>
+            <h2>Parte 1: Criando a Planilha de Orçamento Anual Completo</h2>
+
+            <ol>
+                <li>Abra o programa <strong>ONLYOFFICE</strong> no seu computador.</li>
+                <li>Na tela inicial, clique na opção <strong>Planilha</strong> (ícone de cor verde) para abrir um arquivo em branco.</li>
+                <li>Nesta atividade, vamos construir um painel completo de 12 meses. Clique em cada quadradinho (célula) e digite as palavras e números exatamente como mostra a tabela de referência abaixo:</li>
+            </ol>
+
+            <div class="oo-spreadsheet-mockup">
+                <table class="oo-table">
+                    <thead>
+                        <tr>
+                            <th class="oo-axis"></th>
+                            <th class="oo-axis" scope="col">A</th>
+                            <th class="oo-axis" scope="col">B</th>
+                            <th class="oo-axis" scope="col">C</th>
+                            <th class="oo-axis" scope="col">D</th>
+                            <th class="oo-axis" scope="col">E</th>
+                            <th class="oo-axis" scope="col">F</th>
+                            <th class="oo-axis" scope="col">G</th>
+                            <th class="oo-axis" scope="col">H</th>
+                            <th class="oo-axis" scope="col">I</th>
+                            <th class="oo-axis" scope="col">J</th>
+                            <th class="oo-axis" scope="col">K</th>
+                            <th class="oo-axis" scope="col">L</th>
+                            <th class="oo-axis" scope="col">M</th>
+                            <th class="oo-axis" scope="col">N</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="oo-axis">1</td>
+                            <td colspan="14" class="oo-title-row text-cell" style="text-align: center !important;">Controle financeiro pessoal</td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">2</td>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr class="block-border oo-header-row fw-bold">
+                            <td class="oo-axis">3</td>
+                            <td class="text-cell">Receitas</td>
+                            <td class="text-cell">Janeiro</td>
+                            <td class="text-cell">Fevereiro</td>
+                            <td class="text-cell">Março</td>
+                            <td class="text-cell">Abril</td>
+                            <td class="text-cell">Maio</td>
+                            <td class="text-cell">Junho</td>
+                            <td class="text-cell">Julho</td>
+                            <td class="text-cell">Agosto</td>
+                            <td class="text-cell">Setembro</td>
+                            <td class="text-cell">Outubro</td>
+                            <td class="text-cell">Novembro</td>
+                            <td class="text-cell">Dezembro</td>
+                            <td class="text-cell">Média</td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">4</td>
+                            <td class="text-cell">Salário</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell">R$ 1.815,78</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">5</td>
+                            <td class="text-cell">Extra</td>
+                            <td class="num-cell">R$ 350,00</td>
+                            <td class="num-cell">R$ 420,00</td>
+                            <td class="num-cell">R$ 310,00</td>
+                            <td class="num-cell">R$ 580,00</td>
+                            <td class="num-cell">R$ 400,00</td>
+                            <td class="num-cell">R$ 390,00</td>
+                            <td class="num-cell">R$ 460,00</td>
+                            <td class="num-cell">R$ 320,00</td>
+                            <td class="num-cell">R$ 510,00</td>
+                            <td class="num-cell">R$ 440,00</td>
+                            <td class="num-cell">R$ 380,00</td>
+                            <td class="num-cell">R$ 550,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border oo-total-row fw-bold">
+                            <td class="oo-axis">6</td>
+                            <td class="text-cell">Total</td>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            <td style="background-color: var(--table-bg); border: 1px solid transparent;"></td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">7</td>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr class="block-border oo-header-row fw-bold">
+                            <td class="oo-axis">8</td>
+                            <td class="text-cell">Despesas</td>
+                            <td class="text-cell">Janeiro</td>
+                            <td class="text-cell">Fevereiro</td>
+                            <td class="text-cell">Março</td>
+                            <td class="text-cell">Abril</td>
+                            <td class="text-cell">Maio</td>
+                            <td class="text-cell">Junho</td>
+                            <td class="text-cell">Julho</td>
+                            <td class="text-cell">Agosto</td>
+                            <td class="text-cell">Setembro</td>
+                            <td class="text-cell">Outubro</td>
+                            <td class="text-cell">Novembro</td>
+                            <td class="text-cell">Dezembro</td>
+                            <td class="text-cell">Média</td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">9</td>
+                            <td class="text-cell">Aluguel</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell">R$ 500,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">10</td>
+                            <td class="text-cell">Água</td>
+                            <td class="num-cell">R$ 85,00</td>
+                            <td class="num-cell">R$ 82,00</td>
+                            <td class="num-cell">R$ 90,00</td>
+                            <td class="num-cell">R$ 88,00</td>
+                            <td class="num-cell">R$ 95,00</td>
+                            <td class="num-cell">R$ 102,00</td>
+                            <td class="num-cell">R$ 105,00</td>
+                            <td class="num-cell">R$ 99,00</td>
+                            <td class="num-cell">R$ 91,00</td>
+                            <td class="num-cell">R$ 86,00</td>
+                            <td class="num-cell">R$ 84,00</td>
+                            <td class="num-cell">R$ 89,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">11</td>
+                            <td class="text-cell">Energia</td>
+                            <td class="num-cell">R$ 115,00</td>
+                            <td class="num-cell">R$ 120,00</td>
+                            <td class="num-cell">R$ 110,00</td>
+                            <td class="num-cell">R$ 135,00</td>
+                            <td class="num-cell">R$ 142,00</td>
+                            <td class="num-cell">R$ 155,00</td>
+                            <td class="num-cell">R$ 160,00</td>
+                            <td class="num-cell">R$ 148,00</td>
+                            <td class="num-cell">R$ 130,00</td>
+                            <td class="num-cell">R$ 122,00</td>
+                            <td class="num-cell">R$ 118,00</td>
+                            <td class="num-cell">R$ 125,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">12</td>
+                            <td class="text-cell">Internet</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">13</td>
+                            <td class="text-cell">Mercado</td>
+                            <td class="num-cell">R$ 650,00</td>
+                            <td class="num-cell">R$ 630,00</td>
+                            <td class="num-cell">R$ 670,00</td>
+                            <td class="num-cell">R$ 640,00</td>
+                            <td class="num-cell">R$ 680,00</td>
+                            <td class="num-cell">R$ 690,00</td>
+                            <td class="num-cell">R$ 710,00</td>
+                            <td class="num-cell">R$ 660,00</td>
+                            <td class="num-cell">R$ 645,00</td>
+                            <td class="num-cell">R$ 635,00</td>
+                            <td class="num-cell">R$ 660,00</td>
+                            <td class="num-cell">R$ 720,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">14</td>
+                            <td class="text-cell">Padaria</td>
+                            <td class="num-cell">R$ 50,00</td>
+                            <td class="num-cell">R$ 45,00</td>
+                            <td class="num-cell">R$ 55,00</td>
+                            <td class="num-cell">R$ 48,00</td>
+                            <td class="num-cell">R$ 52,00</td>
+                            <td class="num-cell">R$ 60,00</td>
+                            <td class="num-cell">R$ 58,00</td>
+                            <td class="num-cell">R$ 50,00</td>
+                            <td class="num-cell">R$ 47,00</td>
+                            <td class="num-cell">R$ 53,00</td>
+                            <td class="num-cell">R$ 49,00</td>
+                            <td class="num-cell">R$ 62,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">15</td>
+                            <td class="text-cell">Feira</td>
+                            <td class="num-cell">R$ 90,00</td>
+                            <td class="num-cell">R$ 85,00</td>
+                            <td class="num-cell">R$ 95,00</td>
+                            <td class="num-cell">R$ 100,00</td>
+                            <td class="num-cell">R$ 110,00</td>
+                            <td class="num-cell">R$ 105,00</td>
+                            <td class="num-cell">R$ 95,00</td>
+                            <td class="num-cell">R$ 88,00</td>
+                            <td class="num-cell">R$ 92,00</td>
+                            <td class="num-cell">R$ 105,00</td>
+                            <td class="num-cell">R$ 98,00</td>
+                            <td class="num-cell">R$ 115,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">16</td>
+                            <td class="text-cell">Farmácia</td>
+                            <td class="num-cell">R$ 30,00</td>
+                            <td class="num-cell">R$ 20,00</td>
+                            <td class="num-cell">R$ 45,00</td>
+                            <td class="num-cell">R$ 15,00</td>
+                            <td class="num-cell">R$ 60,00</td>
+                            <td class="num-cell">R$ 25,00</td>
+                            <td class="num-cell">R$ 35,00</td>
+                            <td class="num-cell">R$ 40,00</td>
+                            <td class="num-cell">R$ 18,00</td>
+                            <td class="num-cell">R$ 55,00</td>
+                            <td class="num-cell">R$ 22,00</td>
+                            <td class="num-cell">R$ 70,00</td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border oo-total-row fw-bold">
+                            <td class="oo-axis">17</td>
+                            <td class="text-cell">Total</td>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            <td style="background-color: var(--table-bg); border: 1px solid transparent;"></td>
+                        </tr>
+                        <tr>
+                            <td class="oo-axis">18</td>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr class="oo-header-row fw-bold">
+                            <td class="oo-axis">19</td>
+                            <td class="text-cell no-right-border" style="border-top:1px solid var(--border-color); border-left:1px solid var(--border-color); border-bottom:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);">Janeiro</td>
+                            <td style="border:1px solid var(--border-color);">Fevereiro</td>
+                            <td style="border:1px solid var(--border-color);">Março</td>
+                            <td style="border:1px solid var(--border-color);">Abril</td>
+                            <td style="border:1px solid var(--border-color);">Maio</td>
+                            <td style="border:1px solid var(--border-color);">Junho</td>
+                            <td style="border:1px solid var(--border-color);">Julho</td>
+                            <td style="border:1px solid var(--border-color);">Agosto</td>
+                            <td style="border:1px solid var(--border-color);">Setembro</td>
+                            <td style="border:1px solid var(--border-color);">Outubro</td>
+                            <td style="border:1px solid var(--border-color);">Novembro</td>
+                            <td style="border:1px solid var(--border-color);">Dezembro</td>
+                            <td style="border:1px solid var(--border-color);">Média</td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">20</td>
+                            <td class="text-cell">Receitas</td>
+                            <td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="block-border">
+                            <td class="oo-axis">21</td>
+                            <td class="text-cell">Despesas</td>
+                            <td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td>
+                            <td class="num-cell fw-bold" style="background-color: var(--oo-accent-bg);"></td>
+                        </tr>
+                        <tr class="oo-total-row fw-bold">
+                            <td class="oo-axis">22</td>
+                            <td class="text-cell" style="border:1px solid var(--border-color);">Saldo</td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                            <td style="border:1px solid var(--border-color);"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Formatação da Planilha:</h3>
+
+            <ol>
+                <li>Pressione o clique do mouse no meio da célula <code>A1</code> e arraste para o lado até a célula <code>N1</code>. No menu superior, procure e clique no botão <strong>Mesclar e Centralizar</strong> (ícone com duas setas apontando para os lados ou um quadrado com setas).</li>
+                <li>Selecione a linha 3 (de <code>A3</code> até <code>N3</code>), a linha 8 (de <code>A8</code> até <code>N8</code>) e a linha 19 (de <code>A19</code> até <code>N19</code>). Aplique o efeito <strong>Negrito</strong> (botão com a letra <strong>B</strong>) e mude a cor de fundo dessas células para um tom cinza-claro.</li>
+                <li>Faça o mesmo (coloque em <strong>Negrito</strong>) para as linhas de "Total" (linhas 6 e 17) e para a linha de "Saldo" (linha 22).</li>
+                <li>Clique na célula <code>B4</code> e, segurando o clique, arraste o mouse até cobrir todas as células com números (até a célula <code>N6</code>).</li>
+                <li>No menu superior, localize a caixinha de formato de número (que normalmente diz "Geral") e mude para <strong>Moeda</strong> ou clique diretamente no ícone de moedas/dinheiro.</li>
+                <li>Repita o mesmo processo de seleção e formatação de moeda para o bloco de Despesas (das células <code>B9</code> até <code>N17</code>) e o bloco de Saldo (das células <code>B20</code> até <code>N22</code>).</li>
+                <li>Se alguma palavra ou número parecer cortado ou sumir, dê dois cliques rápidos na linha divisória que fica entre as letras das colunas (lá no topo, por exemplo, entre a coluna A e B). Isso ajustará o tamanho automaticamente para o texto caber.</li>
+                <li>Aplique bordas no bloco de Receitas (das células <code>A3</code> até <code>N6</code>), no bloco de Despesas (das células <code>A8</code> até <code>N17</code>) e o bloco de Saldo (das células <code>A19</code> até <code>N22</code>)</li>
+            </ol>
+
+            <h3>Inclusão dos Cálculos (Fórmulas):</h3>
+            <ol>
+                <li>Clique na célula <code>B6</code> (Total de Janeiro). Digite a fórmula: <code>=SOMA(B4:B5)</code> e aperte a tecla <strong>Enter</strong>. Depois, repita esse mesmo cálculo para todas as outras colunas de meses até chegar em Dezembro (célula <code>M6</code>).</li>
+                <li>Clique na célula <code>B17</code> (Total de Despesas de Janeiro). Digite a fórmula: <code>=SOMA(B9:B16)</code> e aperte a tecla <strong>Enter</strong>. Arraste ou digite a soma para cada mês subsequente até Dezembro (célula <code>M17</code>).</li>
+                <li>Na tabela de resumo lá embaixo, vamos repetir os totais encontrados usando fórmulas:
+                    <ul>
+                        <li>Clique na célula <code>B20</code> (Receitas de Janeiro) e digite: <code>=B6</code> (isso copiará o total automaticamente). Faça o mesmo até Dezembro.</li>
+                        <li>Clique na célula <code>B21</code> (Despesas de Janeiro) e digite: <code>=B17</code>. Faça o mesmo até Dezembro.</li>
+                    </ul>
+                </li>
+                <li>Clique na célula <code>B22</code> (Saldo de Janeiro) e faça a subtração das receitas pelas despesas digitando: <code>=B20-B21</code> e aperte <strong>Enter</strong>. Repita para todas as colunas até Dezembro (célula <code>M22</code>).</li>
+                <li>Para saber quanto se ganhou ou gastou em média no ano, clique na coluna N de cada categoria e faça a média de Janeiro a Dezembro. 
+                    <ul>
+                        <li>Exemplo na linha do Salário (célula <code>N4</code>): <code>=MÉDIA(B4:M4)</code></li>
+                        <li>Exemplo na linha do Aluguel (célula <code>N9</code>): <code>=MÉDIA(B9:M9)</code></li>
+                        <li>Calcule também as médias para as linhas 20, 21 e 22 do resumo final.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Inclusão de Gráfico:</h3>
+
+            <ol>
+                <li>Clique no meio da célula <code>A19</code> e, sem soltar o clique, arraste o mouse para o lado e para baixo até cobrir a célula <code>M21</code>. (Atenção: verifique se selecionou o bloco que contém a linha dos meses, a linha das Receitas e a linha das Despesas, deixando a linha do Saldo de fora).</li>
+                <li>Com esse bloco selecionado, olhe para os menus no topo da tela e clique na aba <strong>Inserir</strong>.</li>
+                <li>Clique no botão <strong>Gráfico</strong> (geralmente representado por um desenho de colunas ou barras). Na lista que aparecer, escolha a opção de <strong>Colunas</strong> (as barras verticais).</li>
+                <li>O ONLYOFFICE vai colocar o gráfico bem em cima da tela. Clique no meio dele, segure o clique e arraste-o para baixo, posicionando-o em um espaço vazio abaixo das suas tabelas.</li>
+                <li>Clique duas vezes sobre o título do gráfico para alterar o nome. Coloque o título <code>Comparativo de receitas e despesas</code>.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Parte 2: Registrando a Evolução Anual no Relatório</h2>
+            
+            <ol>
+                <li>Mantenha a planilha aberta. Abra a tela inicial do ONLYOFFICE novamente e escolha a opção <strong>Documento</strong> (ícone de cor azul) para abrir uma folha de redação em branco.</li>
+                <li>Na primeira linha, digite o título: <code>RELATÓRIO DE RECEITAS E DESPESAS ANUAL</code>. Pressione a tecla <strong>Enter</strong> duas vezes para criar espaço.</li>
+                <li>Digite um parágrafo para explicar a Tabela. Cole a tabela logo a baixo. Repita o procedimento com o Gráfico.</li>
+                <li>Salve os dois arquivos para finalizar a atividade de projeção anual.</li>
+            </ol>
+        </section>
+    </main>
+
+</div>
+
+<script>
+    function toggleContrast() {
+        document.body.classList.toggle('high-contrast');
+    }
+
+    function changeFontSize(action) {
+        const body = document.body;
+        const currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
+        body.style.fontSize = (currentSize + action) + 'px';
+    }
+</script>
+
+</body>
+</html>
