@@ -56,13 +56,6 @@ Capacitar os estudantes na utilização de planilhas eletrônicas e editores de 
 ## Nível ou Modalidade de Ensino
 Anos finais do Ensino Fundamental e Ensino Médio para Educação de Jovens e Adultos (EJA) em contexto de Educação Profissional e Educação Especial integrados. 
 
-## Materiais Necessários para Aplicação
-* Laboratório de informática com um computador por aluno.
-* Computador do professor conectado a uma tela de projeção (projetor ou televisão).
-* Suíte de escritório **ONLYOFFICE** instalada em todas as máquinas.
-* Roteiros de atividades impressos em papel (com fonte ampliada para estudantes com baixa visão) ou disponibilização do arquivo digital em PDF ou preferencialmente em HTML.
-* Canetas/lápis para anotações rápidas.
-
 ## Contexto de Aplicação
 
 Esta atividade foi aplicada no Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), localizado na Asa Sul, durante a Semana Escolar de Combate ao Machismo e a Violência contra a Mulher. Nesse período, a instituição organizou uma programação diferenciada com palestras, oficinas e workshops de temáticas variadas que ocorriam em paralelo, permitindo que os estudantes escolhessem as atividades de seu interesse. A Oficina de Educação Financeira com ONLYOFFICE integrou essa programação.
@@ -75,6 +68,12 @@ A instituição destaca-se por atender, simultaneamente, turmas de Educação de
 
 Para atender a essa diversidade, as atividades do projeto foram estruturadas de forma que o ritmo respeitasse o tempo de aprendizado individual de cada participante. O laboratório de informática está organizado para garantir o livre acesso e a circulação de pessoas com dificuldades de locomoção. Os roteiros de apoio foram impressos em tamanho A3 com fontes ampliadas para atender aos alunos com baixa visão, ou disponibilizados em formato HTML responsivo para leitura direta na tela do computador. Dessa maneira, o ambiente da oficina oportunizou acessibilidade a todos os participantes.
 
+## Materiais Necessários para Aplicação
+* Laboratório de informática com um computador por aluno.
+* Computador do professor conectado a uma tela de projeção (projetor ou televisão).
+* Suíte de escritório **ONLYOFFICE** instalada em todas as máquinas.
+* Roteiros de atividades impressos em papel (com fonte ampliada para estudantes com baixa visão) ou disponibilização do arquivo digital em PDF ou preferencialmente em HTML.
+* Canetas/lápis para anotações rápidas.
 
 ## Detalhamento da Atividade (Etapas de Aplicação)
 
