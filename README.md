@@ -1,13 +1,16 @@
-b# Oficina de Educação Financeira com ONLYOFFICE
+# Oficina de Educação Financeira com ONLYOFFICE
 
+<p align="center">
+  <img src="img/banner.png" alt="Banner ilustrativo da Oficina de Educação Financeira com ONLYOFFICE" width="100%">
+</p>
 
 ## Apresentação
 
-Este material apresenta uma proposta de atividade interdisciplinar voltada a educação financeira e inclusão digital. Foi desenvolvida especificamente para a Educação de Jovens e Adultos (EJA), em contexto de Educação Profissional e Educação Especial integrados. O material foi produzido co-mo atividade prática da componente curricular Projeto Interdisciplinar de Licenciatura em Computação (CIC0207) do curso de Computação da Universidade de Brasília (UnB), sob a docência e orienta-ção da Professora Doutora Letícia Lopes Leite, no primeiro semestre leti-vo de 2026. A iniciativa busca conectar o desenvolvimento do pensamen-to computacional e o domínio de softwares de escritório a situações do cotidiano dos estudantes, utilizando ferramentas de produtividade gratui-to, de código aberto, o capote de escritório ONLYOFFICE como principal ferramenta.
+Este material apresenta uma proposta de atividade interdisciplinar voltada a educação financeira e inclusão digital. Foi desenvolvida especificamente para a Educação de Jovens e Adultos (EJA), em contexto de Educação Profissional e Educação Especial integrados. O material foi produzido co-mo atividade prática da componente curricular Projeto Interdisciplinar de Licenciatura em Computação (CIC0207) do curso de Computação da Universidade de Brasília (UnB), sob a docência e orienta-ção da Professora Doutora Letícia Lopes Leite, no primeiro semestre letivo de 2026. A iniciativa busca conectar o desenvolvimento do pensamento computacional e o domínio de softwares de escritório a situações do cotidiano dos estudantes, utilizando ferramentas de produtividade gratuito, de código aberto, o capote de escritório ONLYOFFICE como principal ferramenta.
 
-A metodologia aqui descrita foi aplicada, no formato de oficina, no Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), localizado na Asa Sul, Brasília-DF, sob a orientação e supervi-são do Professor Nelson Maciel Torres MSc. A aplicação ocorreu durante a Semana Escolar de Combate ao Machismo e a Violência contra a Mu-lher, realizada entre os dias 23 e 27 de maio de 2026. Embora a semana escolar mencionada tenha acontecido com temática definida; palestras, oficinas e apresentações de trabalhos com outros temas inclusivos acon-teciam em paralelo, incluindo a oficina proposta neste material. 
+A metodologia aqui descrita foi aplicada, no formato de oficina, no Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), localizado na Asa Sul, Brasília-DF, sob a orientação e supervisão do Professor Nelson Maciel Torres MSc. A aplicação ocorreu durante a Semana Escolar de Combate ao Machismo e a Violência contra a Mulher, realizada entre os dias 23 e 27 de maio de 2026. Embora a semana escolar mencionada tenha acontecido com temática definida; palestras, oficinas e apresentações de trabalhos com outros temas inclusivos aconteciam em paralelo, incluindo a oficina proposta neste material. 
 
-A Oficina de Educação Financeira com o pacote de escritório ONLYOF-FICE propõe a estruturação dos exercícios de informática em níveis pro-gressivos de dificuldade, permitindo que a atividade acolha e respeite es-tudantes com diferentes tempos de aprendizado e necessidades específi-cas. O método mostrou-se efetivo para todos os participantes da oficina, respondendo tanto às demandas de alunos recém-letrados quanto às ne-cessidades de adaptação e acessibilidade pedagógica de alunos atípicos e com deficiência. Dessa forma, o material aqui proposto torna-se uma possibilidade replicável por outros professores em contextos educacionais similares que pretendam integrar a inclusão digital e o domínio de ferra-mentas de escritório ao ensino de matemática, produção textual, constru-ção de apresentações e educação financeira.
+A Oficina de Educação Financeira com o pacote de escritório ONLYOFFICE propõe a estruturação dos exercícios de informática em níveis progressivos de dificuldade, permitindo que a atividade acolha e respeite estudantes com diferentes tempos de aprendizado e necessidades específicas. O método mostrou-se efetivo para todos os participantes da oficina, respondendo tanto às demandas de alunos recém-letrados quanto às necessidades de adaptação e acessibilidade pedagógica de alunos atípicos e com deficiência. Dessa forma, o material aqui proposto torna-se uma possibilidade replicável por outros professores em contextos educacionais similares que pretendam integrar a inclusão digital e o domínio de ferramentas de escritório ao ensino de matemática, produção textual, construção de apresentações e educação financeira.
 
 Luan Moura
 
@@ -17,7 +20,7 @@ Aluno do curso de Computação
 
 ### Objetivo Geral
 
-Esta atividade foi desenvolvida com a intenção de capacitar os estudantes na utilização de planilhas eletrônicas e editores de texto do pacote de es-critório ONLYOFFICE, aplicando essas ferramentas na organização, aná-lise e relato de dados financeiros do cotidiano. A atividade busca integrar a inclusão digital, o desenvolvimento do raciocínio matemático e a ex-pressão escrita por meio do gerenciamento do orçamento doméstico.
+Esta atividade foi desenvolvida com a intenção de capacitar os estudantes na utilização de planilhas eletrônicas e editores de texto do pacote de escritório ONLYOFFICE, aplicando essas ferramentas na organização, análise e relato de dados financeiros do cotidiano. A atividade busca integrar a inclusão digital, o desenvolvimento do raciocínio matemático e a expressão escrita por meio do gerenciamento do orçamento doméstico.
 
 ### Objetivos Específicos
 
@@ -88,13 +91,13 @@ O público-alvo deste projeto engloba os estudantes dos anos finais do Ensino Fu
 
 Esta atividade foi aplicada no Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), localizado na Asa Sul, Brasília-DF, durante a Semana Escolar de Combate ao Machismo e a Violência contra a Mulher, entre os dias 23 e 27 de maio de 2026. Nesse período, a Instituição organizou uma programação diferenciada com palestras, oficinas e workshops de temáticas variadas que ocorriam em paralelo, permitindo que os estudantes escolhessem as atividades de seu interesse. A Oficina de Educação Financeira com uso da ferramenta para escritório ONLYOFFICE integrou essa programação.
 
-A Instituição destaca-se por atender, simultaneamente, turmas de Educa-ção de Jovens e Adultos (EJA), cursos profissionalizantes e estudantes da Educação Especial. Por essa razão, o público participante reuniu pes-soas com diferentes realidades e idades, variando entre 16 e 72 anos. A turma foi composta por: 
+A Instituição destaca-se por atender, simultaneamente, turmas de Educação de Jovens e Adultos (EJA), cursos profissionalizantes e estudantes da Educação Especial. Por essa razão, o público participante reuniu pessoas com diferentes realidades e idades, variando entre 16 e 72 anos. A turma foi composta por: 
 
 *	Alunos recém-letrados;
 *	Alunos atípicos e/ou com deficiência; e
 *	Alunos com restrições de mobilidade ou limitações físicas.
 
-Para atender a esse contexto diversificado, as atividades do projeto foram estruturadas de modo a respeitar o ritmo e o tempo de aprendizado indi-vidual de cada participante. Os detalhes sobre a variações e extensões das atividades do projeto estão melhor descritas no Capitulo 9 desta cartilha.
+Para atender a esse contexto diversificado, as atividades do projeto foram estruturadas de modo a respeitar o ritmo e o tempo de aprendizado individual de cada participante. Os detalhes sobre a variações e extensões das atividades do projeto estão melhor descritas no Capitulo 9 desta cartilha.
 
 O laboratório de informática utilizado conta com 16 computadores para os estudantes, todos equipados com internet a cabo (LAN), além do computador usado pelo professor, que é conectado a uma televisão usada para projeção das instruções à turma. O espaço físico é bastante ventilado, possui quadro branco e mesa de apoio. O layout da sala favorece o livre acesso e a circulação segura de pessoas com dificuldades de locomoção.
 
@@ -112,9 +115,9 @@ Os roteiros de apoio foram impressos em tamanho A3 (297 x 420 mm) com fontes amp
   
 * Canetas/lápis para anotações rápidas.
 
-> O PDF (*Portable Document Format*) é um padrão global aberto (ISO) desenvolvido pela Adobe para apresentar e compartilhar documentos de forma confiável, independente de software ou sistema operacional. O formato preserva o visual original do arquivo e su-porta recursos avançados como links, mídias, formulários e assinaturas digitais, sendo facilmente acessado em qualquer computador ou celular (ADOBE, 2026).
+> O PDF (*Portable Document Format*) é um padrão global aberto (ISO) desenvolvido pela Adobe para apresentar e compartilhar documentos de forma confiável, independente de software ou sistema operacional. O formato preserva o visual original do arquivo e suporta recursos avançados como links, mídias, formulários e assinaturas digitais, sendo facilmente acessado em qualquer computador ou celular (ADOBE, 2026).
 
-> O HTML5 (*HyperText Markup Language*) é a linguagem de marcação padrão responsá-vel por estruturar e dar significado ao conteúdo das páginas web. Por meio de tags es-pecíficas, ela organiza semanticamente os elementos que compõem um documento digital, determinando de forma clara onde se localizam os cabeçalhos, parágrafos, tabe-las de dados e mídias visuais no navegador (NIC.BR, 2021).
+> O HTML5 (*HyperText Markup Language*) é a linguagem de marcação padrão responsável por estruturar e dar significado ao conteúdo das páginas web. Por meio de tags específicas, ela organiza semanticamente os elementos que compõem um documento digital, determinando de forma clara onde se localizam os cabeçalhos, parágrafos, tabelas de dados e mídias visuais no navegador (NIC.BR, 2021).
 
 ## Detalhamento da Atividade
 
@@ -184,7 +187,7 @@ A atividade encerra-se quando o tempo estipulado expirar, garantindo que mesmo q
 
 ## Conclusão
 
-A aplicação da Oficina de Educação Financeira com o uso do pacote de escritório ONLYOFFICE, no contexto do Centro de Educação de Jovens e Adultos e Educa-ção Profissional de Brasília (CESAS), mostrou que ensinar informática e educação financeira torna-se mais efetivo quando os exercícios usam exemplos do dia a dia e comandos instrucionais exemplificados. Com a aplicação do pacote ONLYOFFICE, os estudantes tiveram a oportunidade de exercitar habilidades digitais, ma-temáticas e textuais de forma prática para organizar um orçamento doméstico.
+A aplicação da Oficina de Educação Financeira com o uso do pacote de escritório ONLYOFFICE, no contexto do Centro de Educação de Jovens e Adultos e Educação Profissional de Brasília (CESAS), mostrou que ensinar informática e educação financeira torna-se mais efetivo quando os exercícios usam exemplos do dia a dia e comandos instrucionais exemplificados. Com a aplicação do pacote ONLYOFFICE, os estudantes tiveram a oportunidade de exercitar habilidades digitais, matemáticas e textuais de forma prática para organizar um orçamento doméstico.
 
 A divisão da atividade em níveis de dificuldade foi fundamental para respeitar o tempo de aprendizado e de execução de cada pessoa. Esse método permitiu que alunos recém-letrados e com deficiência realizassem as tarefas no seu próprio ritmo. Dessa forma, o projeto interdisciplinar pode cumprir com seu papel ao oferecer um roteiro simples e fácil de ser reaplicado por outros professores que queiram unir inclusão digital, matemática, leitura e escrita em salas de aula que interseccionam com a Educação Especial. Este projeto interdisciplinar oportuniza perspectivas futuras de ampliação e de avaliação de seus impactos.
 
